@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
-import LoadingSpinner from './Components/LoadingSpinner'; // Create this component
+import LoadingSpinner from './Components/LoadingSpinner';
 import RedirectPage from "./Components/RedirectPage";
 
 // Lazy load components with meaningful chunk names
@@ -23,11 +23,12 @@ const App = () => {
           <div className="content-area">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-              <Route path="/" element={<RedirectPage />} />
-                <Route path="/" element={<Home />} />
+                {/* Redirect root path to home */}
+                <Route path="/" element={<RedirectPage />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/about" element={<About />} />
-                 <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path="/cart" element={<Cart />} />
               </Routes>
             </Suspense>
