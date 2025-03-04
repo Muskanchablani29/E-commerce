@@ -1,4 +1,5 @@
 import React, { Suspense, lazy } from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
