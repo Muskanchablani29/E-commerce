@@ -70,7 +70,10 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo">
           <a href="/home">
-            <img src="/images/logo.png" alt="Store Logo" />
+            <div className="logo-container">
+              <div className="logo-icon">■</div>
+              <span className="logo-text">NEXUS</span>
+            </div>
           </a>
         </div>
         
@@ -113,31 +116,32 @@ const Navbar = () => {
           {/* Search */}
           <div className="search-container">
             <form onSubmit={handleSearch}>
-              <input 
-                type="text" 
-                className="search-input" 
-                placeholder="Search products..." 
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <button type="submit" className="search-button">
-                <FaSearch />
-              </button>
+              <div className="search-wrapper">
+                <FaSearch className="search-icon" />
+                <input 
+                  type="text" 
+                  className="search-input" 
+                  placeholder="Search for products, brands..." 
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <button type="submit" className="search-button">
+                  Search
+                </button>
+              </div>
             </form>
           </div>
           
-          {/* User account */}
-          <div className="nav-user">
-            <a href="/account" className="nav-icon">
+          {/* Action Buttons */}
+          <div className="nav-actions">
+            <a href="/account" className="nav-button">
               <FaUser />
+              <span>Account</span>
             </a>
-          </div>
-          
-          {/* Shopping cart with counter */}
-          <div className="nav-cart">
-            <a href="/cart" className="nav-icon">
+            <a href="/cart" className="nav-button cart-button">
               <FaShoppingCart />
-              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+              <span>Cart</span>
+              {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
             </a>
           </div>
         </div>
