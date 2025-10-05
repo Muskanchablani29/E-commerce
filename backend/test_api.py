@@ -20,8 +20,9 @@ response = client.get('/api/products/categories/')
 print(f"Status: {response.status_code}")
 if response.status_code == 200:
     data = response.json()
-    print(f"Categories found: {len(data)}")
-    for cat in data[:2]:  # Show first 2 categories
+    categories = data.get('results', data) if isinstance(data, dict) else data
+    print(f"Categories found: {len(categories)}")
+    for cat in categories[:2]:  # Show first 2 categories
         print(f"  - {cat['name']} ({cat['slug']})")
 
 # Test Vendors endpoint
@@ -30,8 +31,9 @@ response = client.get('/api/vendors/')
 print(f"Status: {response.status_code}")
 if response.status_code == 200:
     data = response.json()
-    print(f"Vendors found: {len(data)}")
-    for vendor in data[:2]:  # Show first 2 vendors
+    vendors = data.get('results', data) if isinstance(data, dict) else data
+    print(f"Vendors found: {len(vendors)}")
+    for vendor in vendors[:2]:  # Show first 2 vendors
         print(f"  - {vendor['company_name']} (Rating: {vendor['rating']})")
 
 # Test Products endpoint
@@ -62,7 +64,8 @@ response = client.get('/api/products/?category=1')
 print(f"Electronics category filter - Status: {response.status_code}")
 if response.status_code == 200:
     data = response.json()
-    print(f"Electronics products: {data['count']}")
+    count = data.get('count', len(data.get('results', [])))
+    print(f"Electronics products: {count}")
 
 # Test Product search
 print("\n6. Testing Product Search:")
@@ -70,7 +73,8 @@ response = client.get('/api/products/?search=headphones')
 print(f"Search 'headphones' - Status: {response.status_code}")
 if response.status_code == 200:
     data = response.json()
-    print(f"Search results: {data['count']}")
+    count = data.get('count', len(data.get('results', [])))
+    print(f"Search results: {count}")
 
 print("\n" + "=" * 50)
 print("API Testing Complete!")
