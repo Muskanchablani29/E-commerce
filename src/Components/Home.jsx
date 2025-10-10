@@ -48,93 +48,84 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <div className="mesh-gradient"></div>
-          <div className="floating-elements">
-            <div className="element element-1"></div>
-            <div className="element element-2"></div>
-            <div className="element element-3"></div>
+          <div className="gradient-mesh"></div>
+          <div className="animated-shapes">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
           </div>
         </div>
         <div className="hero-content">
           <div className="hero-text">
             <div className="hero-badge">
-              <div className="badge-icon">⚡</div>
-              <span>Premium E-Commerce Platform</span>
+              <div className="badge-pulse"></div>
+              <span>✨ Premium Shopping Experience</span>
             </div>
             <h1 className="hero-title">
-              <span className="title-line">Next-Generation</span>
-              <span className="title-line gradient-text">Shopping</span>
-              <span className="title-line">Experience</span>
+              <span className="title-word">Discover</span>
+              <span className="title-word gradient-text">Exceptional</span>
+              <span className="title-word">Products</span>
             </h1>
             <p className="hero-subtitle">
-              Transform your shopping journey with our AI-powered platform featuring curated collections, instant delivery, and personalized recommendations.
+              Curated collections from premium brands worldwide. Experience seamless shopping with AI-powered recommendations and lightning-fast delivery.
             </p>
-            <div className="hero-buttons">
-              <button className="cta-button primary">
-                <span>Explore Products</span>
-                <div className="button-icon">→</div>
+            <div className="hero-actions">
+              <button className="primary-btn">
+                <span>Start Shopping</span>
+                <div className="btn-glow"></div>
               </button>
-              <button className="cta-button secondary">
-                <div className="play-icon">▶</div>
-                <span>Watch Demo</span>
+              <button className="secondary-btn">
+                <div className="play-btn">▶</div>
+                <span>See How It Works</span>
               </button>
             </div>
-            <div className="trust-indicators">
-              <div className="indicator">
-                <div className="indicator-icon">🏆</div>
-                <span>Award Winning</span>
+            <div className="social-proof">
+              <div className="proof-item">
+                <div className="proof-number">50K+</div>
+                <div className="proof-text">Happy Customers</div>
               </div>
-              <div className="indicator">
-                <div className="indicator-icon">🔒</div>
-                <span>Secure Payments</span>
+              <div className="proof-item">
+                <div className="proof-number">4.9★</div>
+                <div className="proof-text">Average Rating</div>
               </div>
-              <div className="indicator">
-                <div className="indicator-icon">🚀</div>
-                <span>Fast Delivery</span>
+              <div className="proof-item">
+                <div className="proof-number">24/7</div>
+                <div className="proof-text">Support</div>
               </div>
             </div>
           </div>
           <div className="hero-visual">
-            <div className="visual-container">
-              <div className="main-card">
-                <div className="card-header">
-                  <div className="card-dots">
-                    <span></span><span></span><span></span>
-                  </div>
-                  <div className="card-title">Featured Products</div>
-                </div>
-                <div className="product-grid">
-                  <div className="mini-product">
-                    <div className="mini-image"></div>
-                    <div className="mini-info">
-                      <span>Headphones</span>
-                      <strong>$299</strong>
+            <div className="product-showcase">
+              <div className="showcase-card main-showcase">
+                <div className="card-glow"></div>
+                <div className="product-preview">
+                  <div className="preview-image"></div>
+                  <div className="preview-info">
+                    <h4>Premium Headphones</h4>
+                    <div className="price-tag">
+                      <span className="current-price">$299</span>
+                      <span className="old-price">$399</span>
                     </div>
-                  </div>
-                  <div className="mini-product">
-                    <div className="mini-image"></div>
-                    <div className="mini-info">
-                      <span>Smart Watch</span>
-                      <strong>$199</strong>
-                    </div>
-                  </div>
-                  <div className="mini-product">
-                    <div className="mini-image"></div>
-                    <div className="mini-info">
-                      <span>Speaker</span>
-                      <strong>$149</strong>
-                    </div>
+                    <div className="rating-stars">★★★★★</div>
                   </div>
                 </div>
               </div>
-              <div className="stats-card">
-                <div className="stat-item">
-                  <div className="stat-number">50K+</div>
-                  <div className="stat-label">Customers</div>
+              <div className="showcase-card secondary-showcase">
+                <div className="mini-preview">
+                  <div className="mini-image"></div>
+                  <div className="mini-details">
+                    <span>Smart Watch</span>
+                    <strong>$199</strong>
+                  </div>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">99%</div>
-                  <div className="stat-label">Satisfaction</div>
+              </div>
+              <div className="showcase-card tertiary-showcase">
+                <div className="mini-preview">
+                  <div className="mini-image"></div>
+                  <div className="mini-details">
+                    <span>Wireless Speaker</span>
+                    <strong>$149</strong>
+                  </div>
                 </div>
               </div>
             </div>
@@ -146,57 +137,73 @@ const Home = () => {
       <section id="features" className={`features-section animate-on-scroll ${isVisible['features'] ? 'visible' : ''}`}>
         <div className="container">
           <div className="section-header">
-            <div className="section-badge">
-              <span className="badge-dot"></span>
-              Why Choose Our Platform
+            <div className="section-tag">
+              <div className="tag-dot"></div>
+              <span>Why Choose Us</span>
             </div>
-            <h2 className="section-title">Built for Modern Commerce</h2>
-            <p className="section-subtitle">Advanced technology meets exceptional service to deliver unparalleled shopping experiences</p>
+            <h2 className="section-title">Exceptional Shopping Experience</h2>
+            <p className="section-description">Premium features designed to make your shopping journey seamless and enjoyable</p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card premium">
-              <div className="feature-header">
-                <div className="feature-icon">⚡</div>
-                <div className="feature-badge">Popular</div>
+          <div className="features-container">
+            <div className="feature-item spotlight">
+              <div className="feature-visual">
+                <div className="feature-icon-bg">
+                  <div className="feature-icon">⚡</div>
+                </div>
+                <div className="feature-badge">Most Popular</div>
               </div>
-              <h3>Lightning Performance</h3>
-              <p>Sub-second page loads and instant search results powered by advanced caching technology</p>
-              <div className="feature-metrics">
-                <span>99.9% Uptime</span>
-                <span>0.2s Load Time</span>
-              </div>
-            </div>
-            <div className="feature-card">
-              <div className="feature-header">
-                <div className="feature-icon">🛡️</div>
-              </div>
-              <h3>Enterprise Security</h3>
-              <p>Military-grade encryption and PCI DSS compliance for complete transaction security</p>
-              <div className="feature-metrics">
-                <span>256-bit SSL</span>
-                <span>PCI Compliant</span>
+              <div className="feature-content">
+                <h3>Lightning Fast Delivery</h3>
+                <p>Same-day delivery in major cities with real-time tracking and premium packaging for all orders</p>
+                <div className="feature-stats">
+                  <div className="stat"><strong>2hrs</strong> Average Delivery</div>
+                  <div className="stat"><strong>99.8%</strong> On-time Rate</div>
+                </div>
               </div>
             </div>
-            <div className="feature-card">
-              <div className="feature-header">
-                <div className="feature-icon">🤖</div>
+            <div className="feature-item">
+              <div className="feature-visual">
+                <div className="feature-icon-bg">
+                  <div className="feature-icon">🛡️</div>
+                </div>
               </div>
-              <h3>AI-Powered Intelligence</h3>
-              <p>Machine learning algorithms provide personalized recommendations and smart inventory management</p>
-              <div className="feature-metrics">
-                <span>95% Accuracy</span>
-                <span>Real-time AI</span>
+              <div className="feature-content">
+                <h3>Bank-Level Security</h3>
+                <p>Advanced encryption and fraud protection ensure your transactions are completely secure</p>
+                <div className="feature-stats">
+                  <div className="stat"><strong>256-bit</strong> Encryption</div>
+                  <div className="stat"><strong>100%</strong> Secure</div>
+                </div>
               </div>
             </div>
-            <div className="feature-card">
-              <div className="feature-header">
-                <div className="feature-icon">📊</div>
+            <div className="feature-item">
+              <div className="feature-visual">
+                <div className="feature-icon-bg">
+                  <div className="feature-icon">🎯</div>
+                </div>
               </div>
-              <h3>Advanced Analytics</h3>
-              <p>Comprehensive insights and reporting tools to track performance and optimize conversions</p>
-              <div className="feature-metrics">
-                <span>Real-time Data</span>
-                <span>Custom Reports</span>
+              <div className="feature-content">
+                <h3>Smart Recommendations</h3>
+                <p>AI-powered suggestions based on your preferences and shopping history</p>
+                <div className="feature-stats">
+                  <div className="stat"><strong>95%</strong> Accuracy</div>
+                  <div className="stat"><strong>Real-time</strong> Updates</div>
+                </div>
+              </div>
+            </div>
+            <div className="feature-item">
+              <div className="feature-visual">
+                <div className="feature-icon-bg">
+                  <div className="feature-icon">💎</div>
+                </div>
+              </div>
+              <div className="feature-content">
+                <h3>Premium Quality</h3>
+                <p>Handpicked products from verified suppliers with quality guarantee</p>
+                <div className="feature-stats">
+                  <div className="stat"><strong>5-Star</strong> Quality</div>
+                  <div className="stat"><strong>30-Day</strong> Returns</div>
+                </div>
               </div>
             </div>
           </div>

@@ -32,13 +32,17 @@ body {
   flex: 1;
   margin-top: 70px;
   position: relative;
+  height: calc(100vh - 70px);
+  overflow: hidden;
 }
 
 .content-area {
   flex: 1;
+  overflow-y: auto;
   overflow-x: hidden;
   background: #ffffff;
   position: relative;
+  height: 100%;
 }
 
 /* Typography */
